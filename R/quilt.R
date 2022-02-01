@@ -30,5 +30,3 @@ quilt <- function(cone = 10, theta = 0, phi = 0, device = "LGP", file) {
   dev.off()
 
 }
-
-# test
