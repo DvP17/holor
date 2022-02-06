@@ -1,7 +1,7 @@
 Package: holor
 Type: Package
 Title: Render Hologram Output For The Looking Glass
-Version: 0.1.0
+Version: 0.1.1
 Author: DvP17
 Maintainer: The package maintainer <dvp17@protonmail.ch>
 Description: More about what it does (maybe more than one line)

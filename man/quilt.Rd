@@ -4,7 +4,7 @@
 \alias{quilt}
 \title{Create a quilt image}
 \usage{
-quilt(cone = 10, theta = 0, phi = 0, device = "LGP", file)
+quilt(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file)
 }
 \arguments{
 \item{cone}{The viewing cone}
