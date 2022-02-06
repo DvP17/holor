@@ -4,6 +4,8 @@
 #' @param theta Is theta
 #' @param phi Is phi
 #' @param device Is Looking Glass Device
+#'
+#' @export
 quilt <- function(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file) {
 
   # Set perspectives
