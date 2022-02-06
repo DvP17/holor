@@ -3,10 +3,9 @@ Type: Package
 Title: Render Hologram Output For The Looking Glass
 Version: 0.1.1
 Author: DvP17
-Maintainer: The package maintainer <dvp17@protonmail.ch>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: GPL 3
+Maintainer: DvP17 <dvp17@protonmail.ch>
+Description: A package that renders quilts for the Looking Glass holographic display.
+License: GPL-3
 URL: https://github.com/DvP17/holor
 BugReports: https://github.com/DvP17/holor/issues
 Encoding: UTF-8
