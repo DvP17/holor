@@ -34,7 +34,7 @@ quilt <- function(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file) {
     png(loc, width = wid, height = hei)
     par(mfrow = c(nrw, ncl))
     for (i in fov[ord]) {
-      do.call("scatter3D", c(arg, list(theta = i, phi = phi, cex=20, pch=20)))
+      do.call("scatter3D", c(args, list(theta = i, phi = phi, cex=20, pch=20)))
     }
     dev.off()
   }
