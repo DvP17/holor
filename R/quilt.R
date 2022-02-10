@@ -1,9 +1,12 @@
-#' Create a quilt image
+#' Render quilts
 #'
-#' @param cone The viewing cone
-#' @param theta Is theta
-#' @param phi Is phi
-#' @param device Is Looking Glass Device
+#' \code{quilt} renders quilt images for the Looking Glass holographic display.
+#'
+#' @param fun The plot function. Currently supported for \code{plot3D::scatter3D} and \code{plot3D::hist3D}.
+#' @param cone The viewing cone.
+#' @param theta The theta parameter.
+#' @param phi The phi parameter.
+#' @param device The Looking Glass Device.
 #'
 #' @export
 quilt <- function(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file) {
@@ -29,13 +32,23 @@ quilt <- function(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file) {
   f_nam <- deparse(substitute(fun)[[1]]) # deparse for check
   args <- substitute(fun)
   args[[1]] <- NULL # delete first element (fun name)
+
+  # Render image
+  png(loc, width = wid, height = hei)
+  par(mfrow = c(nrw, ncl))
   if (grepl("scatter3D", f_nam)) {
     require("plot3D")
-    png(loc, width = wid, height = hei)
-    par(mfrow = c(nrw, ncl))
     for (i in fov[ord]) {
       do.call("scatter3D", c(args, list(theta = i, phi = phi, cex=20, pch=20)))
     }
-    dev.off()
+  } else if (grepl("hist3D", f_nam)) {
+    require("plot3D")
+    for (i in fov[ord]) {
+      do.call("hist3D", c(args, list(theta = i, phi = phi, cex=20, pch=20)))
+    }
+  } else {
+    warning("Please enter a supported plot function.")
   }
+  dev.off()
 }
+

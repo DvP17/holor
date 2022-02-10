@@ -2,19 +2,21 @@
 % Please edit documentation in R/quilt.R
 \name{quilt}
 \alias{quilt}
-\title{Create a quilt image}
+\title{Render quilts}
 \usage{
 quilt(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file)
 }
 \arguments{
-\item{cone}{The viewing cone}
+\item{fun}{The plot function. Currently supported for \code{plot3D::scatter3D} and \code{plot3D::hist3D}.}
 
-\item{theta}{Is theta}
+\item{cone}{The viewing cone.}
 
-\item{phi}{Is phi}
+\item{theta}{The theta parameter.}
 
-\item{device}{Is Looking Glass Device}
+\item{phi}{The phi parameter.}
+
+\item{device}{The Looking Glass Device.}
 }
 \description{
-Create a quilt image
+\code{quilt} renders quilt images for the Looking Glass holographic display.
 }
