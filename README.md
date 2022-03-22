@@ -20,16 +20,20 @@ devtools::install_github("DvP17/holor")
 
 ## Create a quilt
 
-```{r}
+```{r example-quilts}
 library(holor)
 quilt(plot3D::scatter3D(x = iris$Sepal.Length,
                         y = iris$Petal.Length,
                         z = iris$Sepal.Width),
       cone = 10, theta = 0, phi = 0, device = "LGP", file = "myquilt.png")
+
+data("VADeaths")
+quilt(plot3D::hist3D(z = VADeaths),
+      cone = 10, theta = 0, phi = 0, device = "LGP", file = "myquilt1.png")
 ```
 
 The `device` argument corresponds to the device you are using to display the hologram. The file name is automatically changed to include information on the parameters needed for HoloPlayStudio.
 
 Now you can export the quilt to HoloPlayStudio with drag & drop.
 
-
+![](holor-scatter-example.gif)
