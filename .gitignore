@@ -3,5 +3,7 @@
 .RData
 .Ruserdata
 testfile.R
-myquilt_qs8x6.png
+myquilt-scatter_qs8x6.png
+myquilt-hist_qs8x6.png
+myquilt-persp_qs8x6.png
 inst/doc

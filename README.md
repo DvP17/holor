@@ -22,14 +22,21 @@ devtools::install_github("DvP17/holor")
 
 ```{r example-quilts}
 library(holor)
+
+# Scatter Plot
 quilt(plot3D::scatter3D(x = iris$Sepal.Length,
                         y = iris$Petal.Length,
                         z = iris$Sepal.Width),
-      cone = 10, theta = 0, phi = 0, device = "LGP", file = "myquilt.png")
+      cone = 10, theta = 0, phi = 0, device = "LGP", file = "myquilt-scatter.png")
 
+# Histogram
 data("VADeaths")
 quilt(plot3D::hist3D(z = VADeaths),
-      cone = 10, theta = 0, phi = 0, device = "LGP", file = "myquilt1.png")
+      cone = 10, theta = 0, phi = 0, device = "LGP", file = "myquilt-hist.png")
+
+# Perspectives
+quilt(plot3D::persp3D(z = volcano, shade = 0.3, col = gg.col(100)),
+      cone = 10, theta = 5, phi = 40, device = "LGP", file = "myquilt-persp.png")
 ```
 
 The `device` argument corresponds to the device you are using to display the hologram. The file name is automatically changed to include information on the parameters needed for HoloPlayStudio.

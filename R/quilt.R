@@ -46,6 +46,11 @@ quilt <- function(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file) {
     for (i in fov[ord]) {
       do.call("hist3D", c(args, list(theta = i, phi = phi, cex=20, pch=20)))
     }
+  } else if (grepl("persp3D", f_nam)) {
+    require("plot3D")
+    for (i in fov[ord]) {
+      do.call("persp3D", c(args, list(theta = i, phi = phi, cex=20, pch=20)))
+    }
   } else {
     warning("Please enter a supported plot function.")
   }

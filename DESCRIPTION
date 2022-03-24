@@ -1,7 +1,7 @@
 Package: holor
 Type: Package
-Title: Render Hologram Output For The Looking Glass
-Version: 0.1.1
+Title: Render Hologram Output For "The Looking Glass" Device
+Version: 0.1.2
 Author: DvP17
 Maintainer: DvP17 <dvp17@protonmail.ch>
 Description: A package that renders quilts for the Looking Glass holographic display.
