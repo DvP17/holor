@@ -9,7 +9,8 @@ A package that creates quilts for holographic images on the Looking Glass Device
 As of right now `holor` supports the following functions:
 
 `plot3D::hist3D()` <br>
-`plot3D::scatter3D()` 
+`plot3D::scatter3D()` <br> 
+`plot3D::persp3D()` 
 
 
 ## Install
