@@ -2,6 +2,8 @@
 #'
 #' \code{quilt} renders quilt images for the Looking Glass holographic display.
 #'
+#' @importFrom plot3D scatter3D hist3D persp3D
+#'
 #' @param fun The plot function. Currently supported for \code{plot3D::scatter3D} and \code{plot3D::hist3D}.
 #' @param cone The viewing cone.
 #' @param theta The theta parameter.
@@ -50,10 +52,12 @@ quilt <- function(fun, cone = 10, theta = 0, phi = 0, device = "LGP", file) {
     require("plot3D")
     for (i in fov[ord]) {
       do.call("persp3D", c(args, list(theta = i, phi = phi, cex=20, pch=20)))
+      print(i)
     }
   } else {
     warning("Please enter a supported plot function.")
   }
   dev.off()
+
 }
 

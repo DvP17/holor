@@ -42,6 +42,17 @@ quilt(plot3D::persp3D(z = volcano, shade = 0.3, col = gg.col(100)),
 
 The `device` argument corresponds to the device you are using to display the hologram. The file name is automatically changed to include information on the parameters needed for HoloPlayStudio.
 
-Now you can export the quilt to HoloPlayStudio with drag & drop.
+## Preview
+
+You can preview the quilts by rendering a GIF file with the `preview_quilt()` function.
+
+```{r example-preview}
+# Scatter Plot
+preview_quilt(file = "myquilt-persp_qs8x6.png", width = 2200)
+```
+
+![](myquilt-persp_qs8x6-preview.gif)
+
+Now you can export the quilt to HoloPlayStudio with drag & drop. Attached is an example of a scatter plot on the Looking Glass Portrait.
 
 ![](holor-scatter-example.gif)
