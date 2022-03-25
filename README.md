@@ -53,6 +53,8 @@ preview_quilt(file = "myquilt-persp_qs8x6.png", width = 2200)
 
 ![](myquilt-persp_qs8x6-preview.gif)
 
+## Export
+
 Now you can export the quilt to HoloPlayStudio with drag & drop. Attached is an example of a scatter plot on the Looking Glass Portrait.
 
 ![](holor-scatter-example.gif)
